@@ -1,0 +1,43 @@
+<mat-drawer-container class="dashboard-container" autosize>
+    <!--SIDEBARD-->
+    <mat-drawer #drawer class="color-sidenavbar" mode="side">
+        <p>Institución</p>
+        @if (showFiller) {
+        <p>Usuarios</p>
+        <p>Estudiantes</p>
+        <p>Profesores</p>
+        <p>Administrativos</p>
+        }
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+            Mostrar más
+        </button>
+    </mat-drawer>
+    <!--SIDEBARD-->
+
+    <!--CONTENIDO-->
+    <div class="example-sidenav-content">
+
+        <!--TOOLBAR-->
+        <p>
+            <mat-toolbar class="toolbar" color="primary">
+                <button (click)="drawer.toggle()"mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span>Colegio Principe de Paz</span>
+                <span class="example-spacer"></span>
+                <button mat-icon-button class="example-icon favorite-icon"
+                    aria-label="Example icon-button with heart icon">
+                    <mat-icon>person</mat-icon>
+                </button>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </mat-toolbar>
+        </p>
+        <!-- TOOLBAR -->
+        <div class="p-6">
+            <app-users></app-users>
+        </div>
+    </div>
+<!--CONTENIDO-->
+</mat-drawer-container>
