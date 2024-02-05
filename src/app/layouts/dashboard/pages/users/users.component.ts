@@ -1,18 +1,6 @@
 import { Component } from '@angular/core';
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  mail: string;
-  rol: string;
-}
+import { User } from './models';
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Carlos Escobar', mail: 'cescobar@gmail.com', rol: 'Profesor'},
-  {position: 2, name: 'Dailyn Silva', mail: 'daysilva@gmail.com', rol: 'Estudiante'},
-  {position: 3, name: 'Nogalis Pérez', mail: 'nogaperez@gmail.com', rol: 'Profesor'},
-  {position: 4, name: 'Lucio Escalante', mail: 'lucescalante@gmail.com', rol: 'Estudiante'},
-  {position: 5, name: 'Darwin Salas', mail: 'darwsal@gmail.com', rol: 'Estudiante'},
-];
 
 
 @Component({
@@ -21,6 +9,28 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrl: './users.component.scss'
 })
 export class UsersComponent {
-  displayedColumns: string[] = ['position', 'name', 'mail', 'rol'];
-  dataSource = [ELEMENT_DATA];
+  displayedColumns: string[] = ['id', 'fullName', 'email','password','role'];
+  dataSource: User[] = [
+    {
+      id: 1,
+      firstName: 'Carlos',
+      lastName: 'Escobar',
+      email: 'carescobar@gmail.com',
+      password: '123456',
+      role: 'Profesor',
+    },
+    {
+      id: 2,
+      firstName: 'Lucio',
+      lastName: 'Escalante',
+      email: 'lucioescal@gmail.com',
+      role: 'Estudiante',
+      password: '654321',
+      },
+  ];
+
+  onUserSubmitted(ev: User): void{
+    this.dataSource = [...this.dataSource, {...ev, id: new Date().getTime()}];
+    }
 }
+

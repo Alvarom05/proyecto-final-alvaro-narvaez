@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormularioReactivoComponent } from './formulario-reactivo.component';
+import { PipesComponent } from './pipes.component';
 
 
 
 @NgModule({
   declarations: [
-    FormularioReactivoComponent
+    PipesComponent
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [PipesComponent]
 })
-export class FormularioReactivoModule { }
+export class PipesModule { }

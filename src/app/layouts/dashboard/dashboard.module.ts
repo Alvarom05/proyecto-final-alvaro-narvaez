@@ -7,6 +7,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { UsersModule } from './pages/users/users.module';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { PipesModule } from './pages/pipes/pipes.module';
 
 
 
@@ -26,7 +27,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatToolbarModule, 
     MatIconModule,
     UsersModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    PipesModule
   ],
   exports:[DashboardComponent],
 })

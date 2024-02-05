@@ -18,25 +18,26 @@
     <div class="example-sidenav-content">
 
         <!--TOOLBAR-->
-        <p>
             <mat-toolbar class="toolbar" color="primary">
                 <button (click)="drawer.toggle()"mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
                     <mat-icon>menu</mat-icon>
                 </button>
-                <span>Colegio Principe de Paz</span>
-                <span class="example-spacer"></span>
-                <button mat-icon-button class="example-icon favorite-icon"
-                    aria-label="Example icon-button with heart icon">
-                    <mat-icon>person</mat-icon>
-                </button>
+                <div>
+                    <h1>Colegio Principe de Paz</h1>
+                </div>
+                <div class="logo">
+                    <img src=".//../../../../assets/img/CPP.png" alt="">
+                </div>
+                
                 <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
                     <mat-icon>search</mat-icon>
                 </button>
             </mat-toolbar>
-        </p>
+        
         <!-- TOOLBAR -->
-        <div class="p-6">
-            <app-users></app-users>
+        <div class="p-7">
+            <app-pipes></app-pipes>
+            <!-- <app-users></app-users> -->
         </div>
     </div>
 <!--CONTENIDO-->
