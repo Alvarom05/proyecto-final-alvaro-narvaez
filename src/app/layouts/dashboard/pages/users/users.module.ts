@@ -11,6 +11,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UsersService } from '../../../../core/services/users.service';
+import { MY_USER_TOKEN } from '../../../../core/injection-token';
 
 
 
@@ -29,6 +31,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     ReactiveFormsModule,
   ],
-  exports: [UsersComponent]
+  exports: [UsersComponent],
+  providers: [UsersService,
+    {
+      provide: MY_USER_TOKEN,
+      useValue: '123456789',
+    }
+  ],
 })
 export class UsersModule { }

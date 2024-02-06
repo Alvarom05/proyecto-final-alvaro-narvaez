@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from './models';
+import { UsersService } from '../../../../core/services/users.service';
 
 
 
@@ -28,6 +29,8 @@ export class UsersComponent {
       password: '654321',
       },
   ];
+
+  constructor(private usersServices: UsersService) {}
 
   onUserSubmitted(ev: User): void{
     this.dataSource = [...this.dataSource, {...ev, id: new Date().getTime()}];

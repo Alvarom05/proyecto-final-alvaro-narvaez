@@ -8,6 +8,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { UsersModule } from './pages/users/users.module';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { PipesModule } from './pages/pipes/pipes.module';
+import { RxjsExampleComponent } from './pages/rxjs-example/rxjs-example.component';
+import { RxjsExampleModule } from './pages/rxjs-example/rxjs-example.module';
 
 
 
@@ -28,7 +30,8 @@ import { PipesModule } from './pages/pipes/pipes.module';
     MatIconModule,
     UsersModule,
     MatFormFieldModule,
-    PipesModule
+    PipesModule,
+    RxjsExampleModule
   ],
   exports:[DashboardComponent],
 })

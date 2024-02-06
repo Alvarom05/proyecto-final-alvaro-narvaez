@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -6,7 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardModule } from './layouts/dashboard/dashboard.module';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { registerLocaleData } from '@angular/common';
 
+import es from '@angular/common/locales/es';
+import esAR from '@angular/common/locales/es-AR';
+import{ MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+
+
+registerLocaleData(es);
+registerLocaleData(esAR);
 
 @NgModule({
   declarations: [
@@ -19,7 +27,19 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     DashboardModule,
     MatFormFieldModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'es-AR',
+    },
+
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: {
+        appearance: 'outline'
+      }
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
