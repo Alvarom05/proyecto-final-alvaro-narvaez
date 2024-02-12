@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RxjsExampleComponent } from './rxjs-example.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 
 
@@ -9,7 +11,7 @@ import { RxjsExampleComponent } from './rxjs-example.component';
     RxjsExampleComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, MatProgressSpinnerModule
   ],
   exports: [RxjsExampleComponent]
 })

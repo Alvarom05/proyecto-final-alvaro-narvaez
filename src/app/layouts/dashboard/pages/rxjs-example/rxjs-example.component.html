@@ -1,1 +1,7 @@
-<p>rxjs-example works!</p>
+<button (click)="getUsersFromObservable()">Cargar Lista de Usuarios</button>
+
+<mat-spinner *ngIf="loading"></mat-spinner>
+
+<ul>
+    <li *ngFor="let user of users">{{ user }}</li>
+</ul>

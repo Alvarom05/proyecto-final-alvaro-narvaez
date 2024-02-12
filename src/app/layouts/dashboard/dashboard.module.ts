@@ -10,6 +10,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { PipesModule } from './pages/pipes/pipes.module';
 import { RxjsExampleComponent } from './pages/rxjs-example/rxjs-example.component';
 import { RxjsExampleModule } from './pages/rxjs-example/rxjs-example.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -31,7 +32,8 @@ import { RxjsExampleModule } from './pages/rxjs-example/rxjs-example.module';
     UsersModule,
     MatFormFieldModule,
     PipesModule,
-    RxjsExampleModule
+    RxjsExampleModule,
+    RouterModule,
   ],
   exports:[DashboardComponent],
 })
