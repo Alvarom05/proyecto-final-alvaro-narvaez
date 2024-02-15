@@ -1,12 +1,15 @@
 .dashboard-container {
-    height: 70vh;
+    height: 200vh;
 }
 .color-sidenavbar {
+    width: 200px;
     text-shadow: 5px 5px 10px rgba(18, 112, 81, 0.512);
 }
 .toolbar {
     background-color: rgba(7, 76, 7, 0.973);
 }
-.logo {
-    border-radius: 50%;
+.logocolegio {
+    width: 150px;
+    border-radius: 100px;
+    margin-top: 40px;
 }

@@ -11,6 +11,10 @@ import { PipesModule } from './pages/pipes/pipes.module';
 import { RxjsExampleComponent } from './pages/rxjs-example/rxjs-example.component';
 import { RxjsExampleModule } from './pages/rxjs-example/rxjs-example.module';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { UsersComponent } from './pages/users/users.component';
+import {MatListModule} from '@angular/material/list';
+
 
 
 
@@ -33,7 +37,17 @@ import { RouterModule } from '@angular/router';
     MatFormFieldModule,
     PipesModule,
     RxjsExampleModule,
-    RouterModule,
+    MatListModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: HomeComponent,
+      },
+      {
+        path: 'users',
+        component: UsersComponent
+      }
+    ]),
   ],
   exports:[DashboardComponent],
 })

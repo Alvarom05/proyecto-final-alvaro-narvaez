@@ -11,7 +11,8 @@ import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
 import esAR from '@angular/common/locales/es-AR';
 import{ MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { LoadingService } from './core/services/loading.service';
 
 
 
@@ -42,7 +43,13 @@ registerLocaleData(esAR);
         appearance: 'outline'
       }
     },
+    // {
+    //   provide: LoadingService,
+    //   useValue: {
+        
+    //   }
+    // }
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

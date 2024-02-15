@@ -1,13 +1,14 @@
 <mat-drawer-container class="dashboard-container" autosize>
     <!--SIDEBARD-->
     <mat-drawer #drawer class="color-sidenavbar" mode="side">
-        <p>Institución</p>
-        @if (showFiller) {
-        <p>Usuarios</p>
-        <p>Estudiantes</p>
-        <p>Profesores</p>
-        <p>Administrativos</p>
-        }
+        <mat-nav-list>
+            <a routerLink="" mat-list-item>Home</a>
+            <a mat-list-item>Institución</a>
+            <a routerLink="users">Usuarios</a>
+            <a mat-list-item>Estudiantes</a>
+            <a mat-list-item>Profesores</a>
+            <a mat-list-item>Administrativos</a>
+        </mat-nav-list>
         <button (click)="showFiller = !showFiller" mat-raised-button>
             Mostrar más
         </button>
@@ -25,9 +26,6 @@
                 <div>
                     <h1>Colegio Principe de Paz</h1>
                 </div>
-                <div class="logo">
-                    <img src=".//../../../../assets/img/CPP.png" alt="">
-                </div>
                 
                 <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
                     <mat-icon>search</mat-icon>
@@ -39,8 +37,10 @@
             <router-outlet></router-outlet>
             <!-- <app-rxjs-example></app-rxjs-example> -->
             <!--<app-pipes></app-pipes>-->
-            <!-- <app-users></app-users> -->
+            
         </div>
     </div>
 <!--CONTENIDO-->
 </mat-drawer-container>
+
+

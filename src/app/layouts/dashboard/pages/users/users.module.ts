@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UsersService } from '../../../../core/services/users.service';
 import { MY_USER_TOKEN } from '../../../../core/injection-token';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -29,6 +30,7 @@ import { MY_USER_TOKEN } from '../../../../core/injection-token';
     MatInputModule, 
     MatSelectModule, 
     MatButtonModule,
+    MatIconModule,
     ReactiveFormsModule,
   ],
   exports: [UsersComponent],
