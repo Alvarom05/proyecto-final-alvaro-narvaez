@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UsersService } from '../../../../core/services/users.service';
 import { MY_USER_TOKEN } from '../../../../core/injection-token';
 import { MatIconModule } from '@angular/material/icon';
+import { UsersRoutingModule } from './user-routing-module';
 
 
 
@@ -32,6 +33,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatIconModule,
     ReactiveFormsModule,
+    UsersRoutingModule,
   ],
   exports: [UsersComponent],
   providers: [UsersService,

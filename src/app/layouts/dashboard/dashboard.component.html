@@ -2,12 +2,24 @@
     <!--SIDEBARD-->
     <mat-drawer #drawer class="color-sidenavbar" mode="side">
         <mat-nav-list>
-            <a routerLink="" mat-list-item>Home</a>
-            <a mat-list-item>Institución</a>
-            <a routerLink="users">Usuarios</a>
+            <a
+                #homeLink="routerLinkActive"
+                routerLinkActive
+                [activated]="homeLink.isActive"
+                routerLink="home" 
+                mat-list-item
+                >Intitución</a>
+            <a
+                #usersLink="routerLinkActive"
+                routerLinkActive
+                [activated]="usersLink.isActive"
+                routerLink="users"
+                mat-list-item
+            >Usuarios</a>
             <a mat-list-item>Estudiantes</a>
             <a mat-list-item>Profesores</a>
             <a mat-list-item>Administrativos</a>
+            <a (click)="logout()">Cerrar Sesión</a>
         </mat-nav-list>
         <button (click)="showFiller = !showFiller" mat-raised-button>
             Mostrar más
@@ -20,7 +32,10 @@
 
         <!--TOOLBAR-->
             <mat-toolbar class="toolbar" color="primary">
-                <button (click)="drawer.toggle()"mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <button 
+                    (click)="drawer.toggle()"
+                    mat-icon-button class="example-icon" 
+                    aria-label="Example icon-button with menu icon">
                     <mat-icon>menu</mat-icon>
                 </button>
                 <div>

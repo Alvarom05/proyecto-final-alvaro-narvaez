@@ -12,10 +12,15 @@ const routes: Routes = [
     loadChildren: () => import('./layouts/dashboard/dashboard.module').then(
       (m) => m.DashboardModule)
   },
+  // {
+  //   path: 'auth/login',
+  //   component: LoginComponent
+  // }
   {
-    path: 'auth/login',
-    component: LoginComponent
-  }
+    path: 'auth',
+    loadChildren: () => 
+    import('./layouts/auth/auth.module').then((m) => m.AuthModule),
+  },
 ];
 
 @NgModule({
