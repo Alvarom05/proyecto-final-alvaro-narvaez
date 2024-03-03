@@ -9,6 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent {
   loginForm: FormGroup;
 
+  revealPassword = false;
+
   constructor(private fb: FormBuilder) {
     this.loginForm = this.fb.group({
       email: this.fb.control('', [Validators.required, Validators.email]),
